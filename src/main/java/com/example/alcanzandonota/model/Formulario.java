@@ -1,30 +1,47 @@
 package com.example.alcanzandonota.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
-public class Formulario {
+public class Formulario implements Serializable {
 
     private String codigo;
     private String tematica;
     private int numeroPreguntas;
     private Profesor profesor;
-    private ArrayList<Estudiante> listaEstudiante = new ArrayList<>();
-    private ArrayList<Pregunta> listaPreguntas = new ArrayList<>();
+    private String curso;
+    private String institucion;
+    private String gradoDificultad;
+    private ArrayList<Estudiante> listaEstudiante;
+    private ArrayList<Pregunta> listaPreguntas;
+    private HashMap<Estudiante, List<String>> listaRespuestas;
 
-    public Formulario(String codigo, String tematica, int numeroPreguntas, Profesor profesor) {
+    public Formulario(String codigo, String tematica, int numeroPreguntas, Profesor profesor, String curso, String institucion, String gradoDificultad) {
         this.codigo = codigo;
         this.tematica = tematica;
         this.numeroPreguntas = numeroPreguntas;
         this.profesor = profesor;
-        listaPreguntas= new ArrayList<>();
+        this.curso = curso;
+        this.institucion = institucion;
+        this.gradoDificultad = gradoDificultad;
+        listaPreguntas = new ArrayList<>();
         listaEstudiante = new ArrayList<>();
+        listaRespuestas = new HashMap<>();
     }
 
     public Formulario() {
-        listaPreguntas= new ArrayList<>();
+        listaPreguntas = new ArrayList<>();
         listaEstudiante = new ArrayList<>();
+        listaRespuestas = new HashMap<>();
     }
 
+    /**
+     * GETTERS AND SETTERS
+     *
+     * @return
+     */
     public String getCodigo() {
         return codigo;
     }
@@ -57,6 +74,30 @@ public class Formulario {
         this.profesor = profesor;
     }
 
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public String getInstitucion() {
+        return institucion;
+    }
+
+    public void setInstitucion(String institucion) {
+        this.institucion = institucion;
+    }
+
+    public String getGradoDificultad() {
+        return gradoDificultad;
+    }
+
+    public void setGradoDificultad(String gradoDificultad) {
+        this.gradoDificultad = gradoDificultad;
+    }
+
     public ArrayList<Estudiante> getListaEstudiante() {
         return listaEstudiante;
     }
@@ -71,5 +112,13 @@ public class Formulario {
 
     public void setListaPreguntas(ArrayList<Pregunta> listaPreguntas) {
         this.listaPreguntas = listaPreguntas;
+    }
+
+    public HashMap<Estudiante, List<String>> getListaRespuestas() {
+        return listaRespuestas;
+    }
+
+    public void setListaRespuestas(HashMap<Estudiante, List<String>> listaRespuestas) {
+        this.listaRespuestas = listaRespuestas;
     }
 }

@@ -1,17 +1,31 @@
 package com.example.alcanzandonota.model;
 
-public class Pregunta {
+import java.io.Serializable;
+
+public class Pregunta implements Serializable {
 
     private String id;
     private String tema;
-    private String valorPregunta;
+    private float valorPregunta;
     private String pregunta;
 
-    public Pregunta(String id, String tema, String valorPregunta, String pregunta) {
+    public Pregunta(String id, String tema, float valorPregunta, String pregunta) {
         this.id = id;
         this.tema = tema;
         this.valorPregunta = valorPregunta;
         this.pregunta = pregunta;
+    }
+
+    public Pregunta(float valorPregunta, String pregunta) {
+        this.valorPregunta = valorPregunta;
+        this.pregunta = pregunta;
+    }
+
+    public Pregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public Pregunta() {
     }
 
     public String getId() {
@@ -30,11 +44,11 @@ public class Pregunta {
         this.tema = tema;
     }
 
-    public String getValorPregunta() {
+    public float getValorPregunta() {
         return valorPregunta;
     }
 
-    public void setValorPregunta(String valorPregunta) {
+    public void setValorPregunta(float valorPregunta) {
         this.valorPregunta = valorPregunta;
     }
 

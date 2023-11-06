@@ -1,0 +1,21 @@
+#text {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+#title {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+#subTitle {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+.root {
+    -fx-background-color: #b3c9ff;
+}
+.button, .text-field {
+    -fx-background-color: #c7ffe4;
+}

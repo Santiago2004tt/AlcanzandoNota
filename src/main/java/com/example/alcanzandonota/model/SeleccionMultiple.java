@@ -1,22 +1,37 @@
 package com.example.alcanzandonota.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class SeleccionMultiple extends Pregunta {
+public class SeleccionMultiple extends Pregunta implements Serializable {
     private int cantidadOpciones;
     private Respuesta respuestaCorrecta;
     private ArrayList<Respuesta> listaOpciones;
 
 
-    public SeleccionMultiple(String id, String tema, String valorPregunta, String pregunta, int cantidadOpciones, Respuesta respuestaCorrecta) {
+    public SeleccionMultiple(String id, String tema, float valorPregunta, String pregunta, int cantidadOpciones, Respuesta respuestaCorrecta) {
         super(id, tema, valorPregunta, pregunta);
         this.cantidadOpciones = cantidadOpciones;
         this.respuestaCorrecta = respuestaCorrecta;
         listaOpciones = new ArrayList<>();
     }
 
-    public SeleccionMultiple(String id, String tema, String valorPregunta, String pregunta) {
+    public SeleccionMultiple(String id, String tema, float valorPregunta, String pregunta) {
         super(id, tema, valorPregunta, pregunta);
+        listaOpciones = new ArrayList<>();
+    }
+
+    public SeleccionMultiple(float valorPregunta, String pregunta) {
+        super(valorPregunta, pregunta);
+        listaOpciones = new ArrayList<>();
+    }
+
+    public SeleccionMultiple(String pregunta) {
+        super(pregunta);
+        listaOpciones = new ArrayList<>();
+    }
+
+    public SeleccionMultiple() {
         listaOpciones = new ArrayList<>();
     }
 

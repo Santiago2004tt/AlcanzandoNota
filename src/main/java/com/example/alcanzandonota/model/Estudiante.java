@@ -1,8 +1,9 @@
 package com.example.alcanzandonota.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Estudiante {
+public class Estudiante implements Serializable {
 
     private String nombre;
     private String apellido;
@@ -12,9 +13,13 @@ public class Estudiante {
     private String tipoDocumento;
     private String edad;
     private String institucion;
+    private String curso;
+    private boolean estado;
+    private String contrasena;
     private ArrayList<Formulario> listaFormularios ;
 
-    public Estudiante(String nombre, String apellido, String email, String telefono, String numeroIdentificacion, String tipoDocumento, String edad, String institucion) {
+    public Estudiante(String nombre, String apellido, String email, String telefono, String numeroIdentificacion,
+                      String tipoDocumento, String edad, String institucion, String curso, boolean estado, String contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
@@ -23,6 +28,9 @@ public class Estudiante {
         this.tipoDocumento = tipoDocumento;
         this.edad = edad;
         this.institucion = institucion;
+        this.curso = curso;
+        this.estado = estado;
+        this.contrasena = contrasena;
         listaFormularios = new ArrayList<>();
     }
 
@@ -94,11 +102,39 @@ public class Estudiante {
         this.institucion = institucion;
     }
 
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
     public ArrayList<Formulario> getListaFormularios() {
         return listaFormularios;
     }
 
     public void setListaFormularios(ArrayList<Formulario> listaFormularios) {
         this.listaFormularios = listaFormularios;
+    }
+
+    public String getNombreCompleto() {
+        return nombre + " " + apellido;
     }
 }
