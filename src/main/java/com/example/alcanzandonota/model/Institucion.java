@@ -50,7 +50,7 @@ public class Institucion implements Serializable {
      * @param cedula
      * @return
      */
-    private Estudiante buscarEstudiante(String cedula) {
+    public Estudiante buscarEstudiante(String cedula) {
         return listaEstudiantes.stream().filter(estudiante -> estudiante.getNumeroIdentificacion().equals(cedula))
                 .findFirst().orElse(null);
     }

@@ -24,6 +24,7 @@
       <TableView fx:id="tblEstudiantes" layoutX="327.0" layoutY="93.0" prefHeight="254.0" prefWidth="234.0">
         <columns>
           <TableColumn fx:id="colEstudiantes" prefWidth="75.0" text="Estudiantes" />
+            <TableColumn fx:id="colNota" prefWidth="75.0" text="Nota" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
