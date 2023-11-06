@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.alcanzandonota.controller.ResponderPreguntaAbiertaController">
+   <children>
+      <TextArea fx:id="taEnunciado" editable="false" layoutX="20.0" layoutY="84.0" prefHeight="124.0" prefWidth="560.0" wrapText="true" />
+      <TextArea fx:id="taRespuesta" layoutX="20.0" layoutY="248.0" prefHeight="98.0" prefWidth="560.0" />
+      <Label id="title" layoutX="220.0" layoutY="14.0" text="Pregunta abierta" />
+      <Label id="subTitle" fx:id="lblNumeroPregunta" layoutX="20.0" layoutY="55.0" text="Pregunta 0" />
+      <Label id="subTitle" layoutX="20.0" layoutY="221.0" text="Repuesta" />
+      <Button id="text" fx:id="btnSiguiente" layoutX="502.0" layoutY="360.0" mnemonicParsing="false" onAction="#siguienteAction" text="Siguiente" />
+   </children>
+</AnchorPane>

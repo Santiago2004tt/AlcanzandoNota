@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.alcanzandonota.controller.SolucionarFormularioController">
+   <children>
+      <Label id="title" layoutX="192.0" layoutY="14.0" text="Solucionar Formulario" />
+      <Label id="text" layoutX="255.0" layoutY="165.0" text="Codigo Prueba" />
+      <Button id="text" fx:id="btnRegresar" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#regresarAction" text="Regresar" />
+      <TextField fx:id="tfCodigoPrueba" layoutX="225.0" layoutY="210.0" onKeyReleased="#codigoPruebaReleased" />
+      <Button id="text" fx:id="btnAceptar" layoutX="266.0" layoutY="299.0" mnemonicParsing="false" onAction="#aceptarAction" text="Aceptar" />
+   </children>
+</AnchorPane>

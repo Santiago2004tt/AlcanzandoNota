@@ -1,8 +1,10 @@
 package com.example.alcanzandonota.model;
 
+import java.awt.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Profesor {
+public class Profesor implements Serializable {
 
     private String nombre;
     private String apellido;

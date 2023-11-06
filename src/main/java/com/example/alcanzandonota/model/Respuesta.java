@@ -1,6 +1,8 @@
 package com.example.alcanzandonota.model;
 
-public class Respuesta {
+import java.io.Serializable;
+
+public class Respuesta implements Serializable {
 
     private String respuesta;
     private String id;
